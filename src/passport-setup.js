@@ -17,9 +17,9 @@ passport.deserializeUser(function (user, done) {
 
 
 passport.use(new GoogleStrategy({
-    clientID: process.env.GOOGLE_CLIENT_ID,
-    clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-    callbackURL: process.env.GOOLE_CALLBACK_URL,
+    clientID: "1034695295245-6mii31t8chm8f8df5chirof2592k4saf.apps.googleusercontent.com",
+    clientSecret: "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",
+    callbackURL: "mongodb+srv://avinash80031:YBoGNpIiM9xWWVfP@aud.frsnewo.mongodb.net/?retryWrites=true&w=majority",
     // scope: ['openid', 'email']
 },
     function (accessToken, refreshToken, profile, done) {
