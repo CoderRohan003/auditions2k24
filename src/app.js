@@ -13,6 +13,9 @@ const mongoose = require('mongoose');
 
 const cookieParser = require('cookie-parser')
 
+// connecting to connection.js
+require("./db/connection");
+
 // Add express-session middleware
 app.use(session({
     secret: process.env.GOOGLE_CLIENT_SECRET,
@@ -24,8 +27,7 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-// connecting to connection.js
-require("./db/connection");
+
 
 // mongoose.set('strictQuery',false);
 // const connectDB = async ()=>{
