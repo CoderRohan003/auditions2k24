@@ -1,0 +1,57 @@
+<header
+    class="sticky top-0 z-40 flex-none mx-auto w-full bg-white md:bg-white/90 dark:bg-slate-900 dark:md:bg-slate-900/90 md:backdrop-blur-sm border-b dark:border-b-0"
+    id="header">
+    <div class="py-3 px-3 mx-auto w-full md:flex md:justify-between max-w-6xl md:px-10">
+        <div class="flex justify-between">
+            <a class="flex items-center" href="/">
+
+                <span class="self-center ml-2 text-2xl font-extrabold text-gray-900 whitespace-nowrap dark:text-white">
+                    ISTE Students' Chapter</span>
+            </a>
+            <div class="flex items-center md:hidden">
+                <button type="button"
+                    class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"
+                    aria-label="Toggle between Dark and Light mode" data-aw-toggle-color-scheme>
+                    <svg viewBox="0 0 24 24" class="w-6 h-6" astro-icon="tabler:sun">
+                        <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="2" class="icon-tabler">
+                            <circle cx="12" cy="12" r="4" />
+                            <path d="M3 12h1m8-9v1m8 8h1m-9 8v1M5.6 5.6l.7.7m12.1-.7-.7.7m0 11.4.7.7m-12.1-.7-.7.7" />
+                        </g>
+                    </svg>
+                </button>
+
+            </div>
+        </div>
+
+        <div class="md:self-center flex items-center mb-4 md:mb-0 ml-2">
+            <div class="hidden items-center md:flex">
+
+                <button type="button"
+                    class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"
+                    aria-label="Toggle between Dark and Light mode" data-aw-toggle-color-scheme>
+                    <svg viewBox="0 0 24 24" class="w-6 h-6" astro-icon="tabler:sun">
+                        <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="2" class="icon-tabler">
+                            <circle cx="12" cy="12" r="4" />
+                            <path d="M3 12h1m8-9v1m8 8h1m-9 8v1M5.6 5.6l.7.7m12.1-.7-.7.7m0 11.4.7.7m-12.1-.7-.7.7" />
+                        </g>
+                    </svg>
+                </button>
+
+                <div class="navigation">
+
+                    <a class="logButton" href="/logout">
+                        <img
+                            src="{{pic}}">
+
+                        <div class="logout">LOGOUT</div>
+
+                    </a>
+
+                </div>
+            </div>
+        </div>
+        </nav>
+    </div>
+</header>
