@@ -15,6 +15,9 @@ const mongoose = require('mongoose');
 
 const cookieParser = require('cookie-parser')
 
+//getting the passport auth
+require('./passport-setup')
+
 // connecting to connection.js
 require("./db/connection");
 
@@ -24,7 +27,7 @@ app.use(session({
     resave: false,
     saveUninitialized: false
 }));
-
+console.log(process.env.GOOGLE_CLIENT_SECRET);
 // Add passport middleware
 app.use(passport.initialize());
 app.use(passport.session());
@@ -42,8 +45,6 @@ app.use(passport.session());
 //     }
 // }
 
-//getting the passport auth
-require('./passport-setup')
 
 const { json } = require("express");
 
