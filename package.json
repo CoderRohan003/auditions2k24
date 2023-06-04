@@ -2,8 +2,8 @@
   "name": "auditions-iste-2k24",
   "version": "1.0.0",
   "description": "ISTE Auditions Page",
+  "main": "index.hbs",
   "scripts": {
-    "start":"node --cwd ./src ./app.js -e js/hbs",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon --cwd ./src ./app.js -e js/hbs"
   },
