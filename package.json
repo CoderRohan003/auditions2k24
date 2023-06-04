@@ -4,6 +4,7 @@
   "description": "ISTE Auditions Page",
   "main": "index.hbs",
   "scripts": {
+    "start": "node index.hbs"
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon --cwd ./src ./app.js -e js/hbs"
   },
