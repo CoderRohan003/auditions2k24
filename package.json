@@ -4,9 +4,10 @@
   "description": "ISTE Auditions Page",
   "main": "index.hbs",
   "scripts": {
-    "start": "nodemon --cwd ./src ./app.js -e js/hbs",
+    "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "node app.js"
+    "dev": "node app.js",
+    "build": "node app.js"
     
   },
   "author": "Avinash Yeddu",
