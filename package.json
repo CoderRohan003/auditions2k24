@@ -6,7 +6,8 @@
   "scripts": {
     "start": "nodemon --cwd ./src ./app.js -e js/hbs",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon --cwd ./src ./app.js -e js/hbs"
+    "dev": "node app.js"
+    
   },
   "author": "Avinash Yeddu",
   "license": "ISC",

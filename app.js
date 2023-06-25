@@ -16,10 +16,10 @@ const mongoose = require('mongoose');
 const cookieParser = require('cookie-parser')
 
 //getting the passport auth
-require('./passport-setup')
+require('./src/passport-setup')
 
 // connecting to connection.js
-require("./db/connection");
+require("./src/db/connection");
 
 // Add express-session middleware
 app.use(session({
@@ -27,7 +27,7 @@ app.use(session({
     resave: false,
     saveUninitialized: false
 }));
-console.log(process.env.GOOGLE_CLIENT_SECRET);
+// console.log(process.env.GOOGLE_CLIENT_SECRET);
 // Add passport middleware
 app.use(passport.initialize());
 app.use(passport.session());
@@ -49,14 +49,14 @@ app.use(passport.session());
 const { json } = require("express");
 
 // geting defined schema
-const Register = require("./models/registers");
+const Register = require("./src/models/registers");
 // const { default: mongoose } = require('mongoose');
 
 
 // path to public, templates and partials 
-const staticPath = path.join(__dirname, "../public");
-const templatePath = path.join(__dirname, "../templates/views");
-const partialPath = path.join(__dirname, "../templates/partials");
+const staticPath = path.join(__dirname, "./public");
+const templatePath = path.join(__dirname, "./templates/views");
+const partialPath = path.join(__dirname, "./templates/partials");
 // console.log(path.join(__dirname,"../public"))
 
 app.use(express.json());
