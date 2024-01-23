@@ -3,6 +3,8 @@ require('dotenv').config();
 
 // console.log(process.env.GOOGLE_CLIENT_ID);
 // console.log(process.env.GOOGLE_CLIENT_SECRET);
+const http = require('http');
+const fs = require('fs');
 const express = require('express');
 const app = express();
 const session = require('express-session');
@@ -11,9 +13,13 @@ const port = process.env.PORT || 3000
 const hbs = require('hbs');
 const passport = require('passport');
 const mongoose = require('mongoose');
+
 // const cookieSession = require('cookie-session');
 
 const cookieParser = require('cookie-parser')
+
+// connecting to connection.js
+require("./db/connection");
 
 // Add express-session middleware
 app.use(session({
@@ -26,8 +32,7 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-// connecting to connection.js
-require("./db/connection");
+
 
 // mongoose.set('strictQuery',false);
 // const connectDB = async ()=>{
@@ -47,6 +52,7 @@ const { json } = require("express");
 
 // geting defined schema
 const Register = require("./models/registers");
+const { fileURLToPath } = require('url');
 // const { default: mongoose } = require('mongoose');
 
 
@@ -159,8 +165,10 @@ app.post('/register', async (req, res) => {
 
 })
 
-
-
+app.get('/demo',(req,res)=>{
+    // req.logout();
+    res.render('demo');
+})
 app.listen(port, () => {
     console.log(`Server running at port ${port}`)
 })
@@ -170,3 +178,11 @@ app.listen(port, () => {
 //         console.log(`Listening on port ${PORT}`);
 //     })
 // });
+
+// other urls
+
+app.get('*',(req,res)=>{
+    
+        res.render('notFound');
+    
+})

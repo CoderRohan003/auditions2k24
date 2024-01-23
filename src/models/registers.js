@@ -41,6 +41,6 @@ const contestantSchema = new mongoose.Schema({
 
 // creating a collection
 
-const Register = new mongoose.model("Register",contestantSchema)
+const Register = new mongoose.model("Register-demo",contestantSchema)
 
 module.exports = Register;
