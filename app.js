@@ -18,8 +18,16 @@ const mongoose = require('mongoose');
 
 const cookieParser = require('cookie-parser')
 
+<<<<<<< HEAD:src/app.js
 // connecting to connection.js
 require("./db/connection");
+=======
+//getting the passport auth
+require('./src/passport-setup')
+
+// connecting to connection.js
+require("./src/db/connection");
+>>>>>>> 7f0884d0b4c6d5fed91df072d50868b8ef1f6818:app.js
 
 // Add express-session middleware
 app.use(session({
@@ -27,7 +35,7 @@ app.use(session({
     resave: false,
     saveUninitialized: false
 }));
-
+// console.log(process.env.GOOGLE_CLIENT_SECRET);
 // Add passport middleware
 app.use(passport.initialize());
 app.use(passport.session());
@@ -45,21 +53,21 @@ app.use(passport.session());
 //     }
 // }
 
-//getting the passport auth
-require('./passport-setup')
 
 const { json } = require("express");
 
 // geting defined schema
 const Register = require("./models/registers");
 const { fileURLToPath } = require('url');
+
+const Register = require("./src/models/registers");
 // const { default: mongoose } = require('mongoose');
 
 
 // path to public, templates and partials 
-const staticPath = path.join(__dirname, "../public");
-const templatePath = path.join(__dirname, "../templates/views");
-const partialPath = path.join(__dirname, "../templates/partials");
+const staticPath = path.join(__dirname, "./public");
+const templatePath = path.join(__dirname, "./templates/views");
+const partialPath = path.join(__dirname, "./templates/partials");
 // console.log(path.join(__dirname,"../public"))
 
 app.use(express.json());
@@ -178,6 +186,7 @@ app.listen(port, () => {
 //         console.log(`Listening on port ${PORT}`);
 //     })
 // });
+<<<<<<< HEAD:src/app.js
 
 // other urls
 
@@ -186,3 +195,5 @@ app.get('*',(req,res)=>{
         res.render('notFound');
     
 })
+=======
+>>>>>>> 7f0884d0b4c6d5fed91df072d50868b8ef1f6818:app.js
