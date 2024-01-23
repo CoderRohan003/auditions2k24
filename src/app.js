@@ -18,16 +18,8 @@ const mongoose = require('mongoose');
 
 const cookieParser = require('cookie-parser')
 
-<<<<<<< HEAD:src/app.js
 // connecting to connection.js
 require("./db/connection");
-=======
-//getting the passport auth
-require('./src/passport-setup')
-
-// connecting to connection.js
-require("./src/db/connection");
->>>>>>> 7f0884d0b4c6d5fed91df072d50868b8ef1f6818:app.js
 
 // Add express-session middleware
 app.use(session({
@@ -59,8 +51,6 @@ const { json } = require("express");
 // geting defined schema
 const Register = require("./models/registers");
 const { fileURLToPath } = require('url');
-
-const Register = require("./src/models/registers");
 // const { default: mongoose } = require('mongoose');
 
 
@@ -186,14 +176,9 @@ app.listen(port, () => {
 //         console.log(`Listening on port ${PORT}`);
 //     })
 // });
-<<<<<<< HEAD:src/app.js
 
 // other urls
 
 app.get('*',(req,res)=>{
-    
         res.render('notFound');
-    
 })
-=======
->>>>>>> 7f0884d0b4c6d5fed91df072d50868b8ef1f6818:app.js
