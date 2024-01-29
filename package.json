@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "ISTE Auditions Page",
   "main": "index.hbs",
+  "engines": {
+    "node": "18.x"
+  },
   "scripts": {
     "start": "nodemon --cwd ./src ./app.js -e js/hbs",
     "test": "echo \"Error: no test specified\" && exit 1",
