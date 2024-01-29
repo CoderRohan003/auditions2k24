@@ -104,12 +104,12 @@ app.get('/google/callback', passport.authenticate('google', { failureRedirect: '
 
 // Regsiter page loading
 app.get('/register', (req, res) => {
-    if (req.isAuthenticated()) {
-        return res.redirect('/register');
-    }
-    else if (!req.isAuthenticated()) {
-        return res.redirect('/');
-    }
+    // if (req.isAuthenticated()) {
+    //     return res.redirect('/register');
+    // }
+    // else if (!req.isAuthenticated()) {
+    //     return res.redirect('/');
+    // }
     res.render("register");
 })
 
