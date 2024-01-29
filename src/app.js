@@ -94,6 +94,7 @@ app.get('/registrationDone', (req, res) => {
     if (req.isAuthenticated() && req.session.registrationDone) {
         res.render('thanks', { name: req.user.displayName, surName: req.user.name.familyName, fName: req.user.name.givenName, email: req.user.emails[0].value, pic: req.user.photos[0].value })
     }
+    res.render('thanks')
 })
 
 //call back url
