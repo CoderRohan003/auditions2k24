@@ -56,6 +56,8 @@ app.set("views", templatePath);
 app.use(cookieParser());
 hbs.registerPartials(partialPath);
 
+
+
 // Home page
 app.get('/', (req, res) => {
     if (req.isAuthenticated() && req.session.registrationDone) {
@@ -66,6 +68,17 @@ app.get('/', (req, res) => {
     }
     else
         res.render("index")
+});
+
+app.get('/home',(req, res) => {
+    if (req.isAuthenticated() && req.session.registrationDone) {
+        return res.redirect('/registrationDone');
+    }
+    else if (req.isAuthenticated()) {
+        return res.redirect('/loginDone');
+    }
+    else
+        res.render("index1")
 });
 
 // google login page

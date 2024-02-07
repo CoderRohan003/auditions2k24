@@ -28,7 +28,7 @@
 <body class="antialiased text-gray-900 dark:text-slate-300 tracking-tight bg-white dark:bg-slate-900">
     <div id="stars2"></div>
     <!-- <div id="stars1"></div> -->
-    {{ {{>navbar}} --}}
+     {{>navbar}}
         <main>
         <section>
 
@@ -97,13 +97,14 @@
                                     srcset="/assets/hero_rocketlaunch.0eeb75a0_Z1OsFB7.avif 2000w,/assets/hero_rocketlaunch.0eeb75a0_Z1OsFB7.avif 2000w">
                                 <source type="image/webp"
                                     srcset="/assets/hero_rocketlaunch.0eeb75a0_Z167QDl.webp 2000w,/assets/hero_rocketlaunch.0eeb75a0_Z167QDl.webp 2000w"> -->
-                                    <div id="fade_out" >
-                                        <img width="2000"  class="bottom" src="./img/gandr-collage (1).jpg" style="border: 10px solid white;"/>
-                                        <img width="2000"  class="top" src="./img/logo.jpg" style="height: 700px;border: 5px solid white;" />
-                                      </div>
-                                      <img width="2000" height="1143" src="" loading="loading"
-                                    decoding="async" alt="Hero Image"
-                                    class="mx-auto rounded-md shadow-lg bg-gray-400 dark:bg-slate-700 w-full">                                     
+                                    <div class="image-container mx-auto rounded-md shadow-lg bg-gray-400 dark:bg-slate-700 w-full">
+  <img src="./img/logo.jpg" class="image ">
+  <img src="./img/gandr-collage (1).jpg" class="image fade-in" style="border: 4px solid white;">
+</div>
+
+                                      {{!-- <img width="2000" height="1143" src="" loading="loading"
+                                    decoding="async"
+                                    class="mx-auto rounded-md shadow-lg bg-gray-400 dark:bg-slate-700 w-full" style="background: transparent;">                                      --}}
                             </picture>
                         </div>
                     </div>
@@ -271,11 +272,11 @@
                         <main class="page-content">
                             
                         <div class="flip-card">
-                            <div class="flip-card-inner" style="width: 120px;">
-                            <div class="flip-card-front" style="width: 120px;">
-                                <img src="https://miro.medium.com/v2/resize:fit:1200/1*V-Jp13LvtVc2IiY2fp4qYw.jpeg" style="width:120px;height:300px;">
+                            <div class="flip-card-inner" >
+                            <div class="flip-card-front" >
+                                <img src="https://miro.medium.com/v2/resize:fit:1200/1*V-Jp13LvtVc2IiY2fp4qYw.jpeg" >
                             </div>
-                            <div class="flip-card-back" style="width: 120px;">
+                            <div class="flip-card-back" >
                                 <br>
                                 <h1>Web Development</h1> <br><br>
                                 <p>“Website without visitors is like a ship lost in the horizon.”</p> 
@@ -284,11 +285,11 @@
                             </div>
                         </div>
                         <div class="flip-card">
-                            <div class="flip-card-inner" style="width:120px;">
-                            <div class="flip-card-front" style="width:120px;">
-                                <img src="https://www.internationalbrandequity.com/wp-content/uploads/2022/04/event-management-guide.jpg" alt="Avatar" style="width:120px;height:300px;">
+                            <div class="flip-card-inner" >
+                            <div class="flip-card-front" >
+                                <img src="https://www.internationalbrandequity.com/wp-content/uploads/2022/04/event-management-guide.jpg" alt="Avatar" >
                             </div>
-                            <div class="flip-card-back" style="width:120px;">
+                            <div class="flip-card-back" >
                                 <br>
                                 <h1>Event Managers</h1> <br><br>
                                 <p>“A goal without a plan is just a wish.”</p> 
@@ -297,11 +298,11 @@
                             </div>
                         </div>
                         <div class="flip-card">
-                            <div class="flip-card-inner" style="width:120px;">
-                            <div class="flip-card-front" style="width:120px;">
-                                <img src="https://www.georgeanimatrix.com/blog/wp-content/uploads/2023/08/jpeg-optimizer_14-1.jpg" alt="Avatar" style="width:120px;height:300px;">
+                            <div class="flip-card-inner" >
+                            <div class="flip-card-front" >
+                                <img src="https://www.georgeanimatrix.com/blog/wp-content/uploads/2023/08/jpeg-optimizer_14-1.jpg" alt="Avatar" >
                             </div>
-                            <div class="flip-card-back" style="width:120px;">
+                            <div class="flip-card-back" >
                                 <br>
                                 <h1>Graphic Designers</h1> <br><br>
                                 <p>"Design is intelligence made visible." </p> 
@@ -310,11 +311,11 @@
                             </div>
                         </div>
                         <div class="flip-card">
-                            <div class="flip-card-inner" style="width:120px;">
-                            <div class="flip-card-front" style="width:120px;">
-                                <img src="https://media.licdn.com/dms/image/D5612AQFbdnbkVUBVuA/article-cover_image-shrink_720_1280/0/1664892809287?e=2147483647&v=beta&t=_zPKPn58PLuS2HaLnWpbCOXJg-KFa4dVwDLfidkANHY" alt="Avatar" style="width:120px;height:300px;">
+                            <div class="flip-card-inner" >
+                            <div class="flip-card-front">
+                                <img src="https://media.licdn.com/dms/image/D5612AQFbdnbkVUBVuA/article-cover_image-shrink_720_1280/0/1664892809287?e=2147483647&v=beta&t=_zPKPn58PLuS2HaLnWpbCOXJg-KFa4dVwDLfidkANHY" alt="Avatar" >
                             </div>
-                            <div class="flip-card-back" style="width:120px;">
+                            <div class="flip-card-back">
                                 <br>
                                 <h1>Content Writers</h1> <br><br>
                                 <p>“Give Words to your Thoughts.”</p> 
@@ -323,11 +324,11 @@
                             </div>
                         </div>
                         <div class="flip-card">
-                            <div class="flip-card-inner" style="width:120px;">
-                            <div class="flip-card-front" style="width:120px;">
-                                <img src="https://www.filmsupply.com/articles/wp-content/uploads/sites/3/2023/02/peter-stumpf-yk9VXp4W5-Q-unsplash-1.jpg" alt="Avatar" style="width:120px;height:300px;">
+                            <div class="flip-card-inner" >
+                            <div class="flip-card-front" >
+                                <img src="https://www.filmsupply.com/articles/wp-content/uploads/sites/3/2023/02/peter-stumpf-yk9VXp4W5-Q-unsplash-1.jpg" alt="Avatar" >
                             </div>
-                            <div class="flip-card-back" style="width:120px;">
+                            <div class="flip-card-back">
                                 <br>
                                 <h1>Video Editors</h1> <br><br>
                                 <p>“Editing is everything. Cut until you can cut no more.”</p> 
@@ -335,84 +336,7 @@
                             </div>
                             </div>
                         </div>
-                            <!-- <div class="card">
-                                <div class="content">
-                                    <img src="../images/111png.png" >
-                                    <h2 class="title">Web Development</h2>
-                                    <p class="copy"></p>
-                                    
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="content">
-                                    <h2 class="title">Event Managers</h2>
-                                    <p class="copy">“A goal without a plan is just a wish.”</p>
-
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="content">
-                                    <h2 class="title">Graphic Designers</h2>
-                                    <p class="copy">"Design is intelligence made visible." </p>
-
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="content">
-                                    <h2 class="title">Content Writers</h2>
-                                    <p class="copy">“Give Words to your Thoughts.”</p>
-
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="content">
-                                    <h2 class="title">Video Editors</h2>
-                                    <p class="copy">“Editing is everything. Cut until you can cut no more.”</p>
-
-                                </div>
-                            </div>  -->
-                        </main>
-                        <!-- partial -->
-
-
-
-
-                        <!-- partial:index.partial.html -->
-                        <!-- <div class="container">
-                            <ul class="character-collection">
-                                <li class="person fahkumram">
-                                    <div class="hover-person"></div>
-                                    <img src="https://fadelun.github.io/hosted-assets/tekken-property/fahkumram.png"
-                                        alt="fahkumram" />
-                                    <p class="text-name">fahkumram</p>
-                                </li>
-                                <li class="person kunimitsu">
-                                    <div class="hover-person"></div>
-                                    <img src="https://fadelun.github.io/hosted-assets/tekken-property/kunimitsu.png"
-                                        alt="kunimitsu" />
-                                    <p class="text-name">kunimitsu</p>
-                                </li>
-                                <li class="person leroy">
-                                    <div class="hover-person"></div>
-                                    <img src="https://fadelun.github.io/hosted-assets/tekken-property/leroy.png"
-                                        alt="leroy" />
-                                    <p class="text-name">leroy</p>
-                                </li>
-                                <li class="person lidia">
-                                    <div class="hover-person"></div>
-                                    <img src="https://fadelun.github.io/hosted-assets/tekken-property/lidia.png"
-                                        alt="lidia" />
-                                    <p class="text-name">lidia</p>
-                                </li>
-                                <li class="person zafina">
-                                    <div class="hover-person"></div>
-                                    <img src="https://fadelun.github.io/hosted-assets/tekken-property/zafina.png"
-                                        alt="zafina" />
-                                    <p class="text-name">zafina</p>
-                                </li>
-                            </ul>
-                        </div> -->
-                        <!-- partial -->
+                           </main>
 
 
 
